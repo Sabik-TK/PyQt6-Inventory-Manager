@@ -27,8 +27,7 @@ myenv\Scripts\activate
 
 ### Install Required Packages 
 ```bash
-pip3 freeze > requirements.txt  # Python3
-pip freeze > requirements.txt  # Python2
+pip install -r requirements.txt
 ```
 ### Start 
 ```bash
