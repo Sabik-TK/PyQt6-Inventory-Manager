@@ -20,6 +20,7 @@ class AddProduct(QDialog):
         category=self.category.currentText()
         stock=self.stock.value()
         config.add_product(1,name,stock,category)
+        self.msg_label.setText(f"Successfully added a product with name  : {name}")
         print("Successfully added a product with name: ",name)
 
     def gotoback(self):

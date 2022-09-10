@@ -1,5 +1,4 @@
 import sqlite3
-from unittest import result
 connection,cursor=None,None
 
 try:
@@ -53,6 +52,20 @@ def create_user(id=None,username=None,password=None):
     except:
         print('db_error @create_user')
 
+def list_product():
+    global connection,cursor
+    try:
+        print('@list_product')
+        result=cursor.execute(f"SELECT * FROM Product ORDER BY -id")
+        products = []
+        for product in result:
+            print(product[0])
+            products.append({'id':product[0],'name':product[1],'stock':product[2],'category':product[3]})   
+        return products
+    except:
+        print('db_error @list_product')
+        return []
 
 
+# def list_products
 

@@ -33,6 +33,8 @@ class Login(QDialog):
             print('Current user : ', user['username'])
 
         else:
+            self.msg_label.setText('invalid credentials')
             print('invalid credentials')
+
 
 
